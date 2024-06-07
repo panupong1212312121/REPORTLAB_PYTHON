@@ -5,9 +5,12 @@ from reportlab.platypus import Paragraph,Table,TableStyle,Frame
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
-pdf=canvas.Canvas("tutorial55.pdf")
+path_output = r'output/tutorial55.pdf'
+
+pdf=canvas.Canvas(path_output)
 flow_obj=[]
 styles=getSampleStyleSheet()
+
 t1=Paragraph("table1",style=styles["Normal"])
 flow_obj.append(t1)
 t=Table([[1,2,3,4],

@@ -6,7 +6,9 @@
 from reportlab.platypus import Paragraph,SimpleDocTemplate
 from reportlab.lib.styles import getSampleStyleSheet
 
-pdf=SimpleDocTemplate("tutorial19.pdf")
+path_output = r'output/tutorial19.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 flow_object=[]
 styles=getSampleStyleSheet()
 text='''
@@ -16,3 +18,4 @@ paragraph_text=Paragraph(text,style=styles["Normal"])
 flow_object.append(paragraph_text)
 pdf.build(flow_object)
 
+# strike : ขีดค่า 

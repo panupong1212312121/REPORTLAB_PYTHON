@@ -7,9 +7,11 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import cm
 from reportlab.lib import colors
 from reportlab.pdfgen import canvas
-pdf=canvas.Canvas("tutorial34.pdf")
-pdf.drawCentredString(300,10,str(pdf.getPageNumber()))
-pdf.showPage()
+path_output = r'output/tutorial34.pdf'
+
+pdf=canvas.Canvas(path_output)
+pdf.drawCentredString(300,10,str(pdf.getPageNumber())) # เขียน text ตรงกลางหน้ากระดาษ
+pdf.showPage() #สร้างหน้า pdf เปล่าขึ้นมา 
 pdf.drawCentredString(300,10,str(pdf.getPageNumber()))
 pdf.showPage()
 pdf.drawCentredString(300,10,str(pdf.getPageNumber()))

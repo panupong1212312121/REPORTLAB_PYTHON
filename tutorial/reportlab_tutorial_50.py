@@ -4,7 +4,9 @@ from reportlab.platypus.doctemplate import SimpleDocTemplate, PageTemplate,PageB
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph,SimpleDocTemplate,PageTemplate,NextPageTemplate,Frame
 from reportlab.lib.styles import getSampleStyleSheet
-pdf=SimpleDocTemplate("tutorial50.pdf")
+path_output = r'output/tutorial50.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 frame1=Frame(10,20,600,1000,showBoundary=1)
 frame2=Frame(10,20,1000,700,showBoundary=1)
 port=PageTemplate(id="p",pagesize=[800,1200],frames=[frame1])

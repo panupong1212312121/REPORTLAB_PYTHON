@@ -3,10 +3,14 @@
 
 #reportlab graphics sub package to create multiple shapes
 
+#สร้าง barCode
+
 from reportlab.graphics.barcode import code39
 from reportlab.platypus import SimpleDocTemplate,Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
-pdf=SimpleDocTemplate("tutorial39.pdf")
+path_output = r'output/tutorial38.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 flow_obj=[]
 styles=getSampleStyleSheet()
 codetext="-paste-colgatemax white-100gm-5usd-"

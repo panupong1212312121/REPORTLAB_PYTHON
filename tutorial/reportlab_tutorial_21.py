@@ -2,7 +2,9 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph,SimpleDocTemplate
 from reportlab.lib.units import cm
 from reportlab.lib.styles import getSampleStyleSheet    
-pdf=SimpleDocTemplate("tutorial21.pdf") 
+path_output = r'output/tutorial21.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 flow_object=[]   
 styles=getSampleStyleSheet()
 text='''

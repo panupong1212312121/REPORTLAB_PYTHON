@@ -1,23 +1,24 @@
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import cm
 from reportlab.lib import colors
+path_output = r'output/tutorial58.pdf'
 
-pdf=canvas.Canvas("tutorial58.pdf")
+pdf=canvas.Canvas(path_output)
 pdf.translate(cm,cm)
 pdf.setPageSize((1024,700))
 #template 1
 pdf.setStrokeColor(colors.green)
 pdf.setFillColor(colors.green)
 pdf.rect(40,560,900,100,stroke=1,fill=1)
-pdf.setStrokeColor(colors.red)
-pdf.setFillColor(colors.red)
-pdf.rect(40,30,900,500,stroke=1,fill=1)
 
 pdf.setStrokeColor(colors.red)
 pdf.setFillColor(colors.red)
 pdf.rect(40,30,900,500,stroke=1,fill=1)
-
 pdf.save()
+
+# pdf.setStrokeColor(colors.red)
+# pdf.setFillColor(colors.red)
+# pdf.rect(40,30,900,500,stroke=1,fill=1)
 
 #template 2
 # pdf.setStrokeColor(colors.green)

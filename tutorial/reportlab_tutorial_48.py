@@ -3,7 +3,9 @@
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 from reportlab.lib.units import cm
-pdf=canvas.Canvas("tutorial48.pdf")
+path_output = r'output/tutorial48.pdf'
+
+pdf=canvas.Canvas(path_output)
 pdf.translate(cm, cm)
 pdf.drawCentredString(200,600,"lorem ipsum test test NWLERHLWER WERLEWJR")
 pdf.rotate(20)

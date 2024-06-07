@@ -6,7 +6,9 @@ from reportlab.platypus import Paragraph,SimpleDocTemplate,Table,TableStyle,Imag
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
-pdf=SimpleDocTemplate("tutorial27.pdf")
+path_output = r'output/tutorial27.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 flow_obj=[]
 styles=getSampleStyleSheet()
 im_data1=Image("logo.jpg",50,50)
@@ -18,7 +20,7 @@ t=Table([[im_data1 for i in range(1,7)],
          [x for x in range(1,7)],
          [p_text for i in range(1,7)]])
 t_style=TableStyle([("BOX",(0,0),(-1,-1),2,colors.red),
-                    ("GRID",(0,0),(-1,-1),2,colors.blue),
+                    ("GRID",(0,0),(-1,-1),2,colors.blue), # ตีเส้นตารางทุกเส้นที่ติดกับข้อมูลในพิกัดระหว่าง (0,0) ถึง (-1,-1)
                     ("BACKGROUND",(0,0),(-1,-1),colors.yellow)])
 t.setStyle(t_style)
 flow_obj.append(t)

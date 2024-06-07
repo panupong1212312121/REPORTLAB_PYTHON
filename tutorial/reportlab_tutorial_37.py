@@ -9,13 +9,16 @@
 
 from reportlab.graphics import shapes,renderPM
 from reportlab.lib import colors
+
+path_output = r'output/tutorial37.png'
+
 drawing_obj=shapes.Drawing(700,800)
 drawing_obj.add(shapes.Rect(20,20,300,300,fillColor=colors.green))
-renderPM.drawToFile(drawing_obj,"tutorial37.png","PNG")
+renderPM.drawToFile(drawing_obj,path_output,"PNG")
 
 #circle
 from reportlab.graphics import shapes,renderPM
 from reportlab.lib import colors
 drawing_obj=shapes.Drawing(700,800)
 drawing_obj.add(shapes.Circle(150,150,75,fillColor=colors.green))
-renderPM.drawToFile(drawing_obj,"tutorial37.png","PNG")
+renderPM.drawToFile(drawing_obj,path_output,"PNG")

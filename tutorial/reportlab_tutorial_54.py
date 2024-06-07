@@ -3,7 +3,9 @@
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Frame,Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
-pdf=canvas.Canvas("tutorial54.pdf")
+path_output = r'output/tutorial54.pdf'
+
+pdf=canvas.Canvas(path_output)
 flow_obj=[]
 styles=getSampleStyleSheet()
 text1=Paragraph("inner-frame",style=styles["Normal"])

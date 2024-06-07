@@ -4,7 +4,9 @@
 #create table with alignment
 from reportlab.platypus import Paragraph,SimpleDocTemplate,Table,TableStyle
 from reportlab.lib import colors
-pdf=SimpleDocTemplate("tutorial29.pdf")
+path_output = r'output/tutorial29.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 flow_obj=[]
 data=[[1,2,3,4,5],
       [1,2,3,4,5],

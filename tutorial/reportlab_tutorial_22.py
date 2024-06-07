@@ -2,10 +2,12 @@
 #inline image in paragraph  
 from reportlab.platypus import Paragraph,SimpleDocTemplate
 from reportlab.lib.styles import getSampleStyleSheet
-pdf=SimpleDocTemplate("tutorial22.pdf")
+path_output = r'output/tutorial22.pdf'
+
+pdf=SimpleDocTemplate(path_output)
 flow_object=[]
 styles=getSampleStyleSheet()
-styles["Normal"].spaceAfter=40
+styles["Normal"].spaceAfter=40 # space ระหว่าง paragraph = 40 pixels
 text='''
      this is our logo <img src="logo.jpg" width="50" height="50"/>,hope you guys like it.
      '''
